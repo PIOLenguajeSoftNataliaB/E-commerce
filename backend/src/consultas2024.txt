@@ -1,0 +1,172 @@
+ejemplo de post para carrito
+{
+    "usuario_id": "34",
+    "productos": [
+        {
+            "producto": "673d08898313bd12ca6fd389",
+            "cantidad": 2
+        },
+        {
+            "producto": "673d08948313bd12ca6fd38b",
+            "cantidad": 3
+        }
+    ]
+}
+
+base de datos postgres
+------------------------------------------------
+const { Pool } = require('pg');
+
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'mi_base_de_datos_usuarios',
+    password: 'admin',
+    port: 5432,
+});
+
+// Este bloque es opcional para verificar la conexión al iniciar
+pool.connect()
+    .then(() => console.log('Conexión exitosa a PostgreSQL'))
+    .catch(err => console.error('Error al conectar a PostgreSQL:', err.message));
+
+module.exports = pool;
+
+sigue el 19 de noviembre el anterior es del 20
+
+
+19
+
+categoria muebles
+---------------------------------
+{
+  "nombre": "Sofa Mod. X",
+  "descripcion": "Sofa cómodo para living, ideal para espacios pequeños.",
+  "precio": 400,
+  "imagenUrl": "https://ejemplo.com/sofa.jpg",
+  "stock": 10,
+  "categoria": "673fcdb0d29c0bbd158252ef"
+}
+{
+  "nombre": "Escritorio Moderno",
+  "descripcion": "Escritorio elegante para oficina con múltiples compartimentos.",
+  "precio": 200,
+  "imagenUrl": "https://ejemplo.com/escritorio.jpg",
+  "stock": 25,
+  "categoria": "673fcdb0d29c0bbd158252ef"
+}
+{
+  "nombre": "Silla de Oficina Ergonomica",
+  "descripcion": "Silla ergonómica para largas horas de trabajo con ajuste de altura.",
+  "precio": 150,
+  "imagenUrl": "https://ejemplo.com/silla.jpg",
+  "stock": 40,
+  "categoria": "673fcdb0d29c0bbd158252ef"
+}
+
+--------------------------------
+categoria electronica deben cambiar el ID por el de cada uno
+-----------------------------
+{
+  "nombre": "Smartphone XYZ",
+  "descripcion": "Smartphone con cámara de alta resolución y gran rendimiento.",
+  "precio": 500,
+  "imagenUrl": "https://ejemplo.com/smartphone.jpg",
+  "stock": 50,
+  "categoria": "673bc5428d2167470a9cc31b"
+}
+{
+  "nombre": "Laptop ABC",
+  "descripcion": "Laptop ultradelgada con procesador de última generación.",
+  "precio": 1200,
+  "imagenUrl": "https://ejemplo.com/laptop.jpg",
+  "stock": 30,
+  "categoria": "673bc5428d2167470a9cc31b"
+}
+{
+  "nombre": "Auriculares Bluetooth",
+  "descripcion": "Auriculares con cancelación de ruido y larga duración de batería.",
+  "precio": 100,
+  "imagenUrl": "https://ejemplo.com/auriculares.jpg",
+  "stock": 80,
+  "categoria": "673bc5428d2167470a9cc31b"
+}
+--
+
+---------------------------
+categorias
+-----------------------------------
+{
+  "nombre": "Muebles",
+  "descripcion": "Mobiliario para hogar y oficina."
+}
+-----------------------------------
+{
+  "nombre": "Juguetes",
+  "descripcion": "Diversión para niños de todas las edades."
+}
+------------------------------------
+{
+  "nombre": "Deportes",
+  "descripcion": "Artículos deportivos y accesorios."
+}
+-----------------------------------
+{
+  "nombre": "Libros",
+  "descripcion": "Colección de libros de diversos géneros."
+}
+
+
+
+
+----user?
+
+----------------------------------------
+{
+    "nombre": "Carlos Ruiz",
+    "correo": "carlosruiz@example.com",
+    "password": "password123",
+    "direccion": "Calle Ficticia 101, Ciudad Ejemplo",
+    "telefono": "3009876543",
+    "rol": "cliente"
+}
+----------------------------------------
+{
+    "nombre": "Ana María López",
+    "correo": "anamaria@example.com",
+    "password": "ana1234",
+    "direccion": "Avenida Siempre Viva 23, Ciudad Real",
+    "telefono": "3008765432",
+    "rol": "admin"
+}
+----------------------------------------------
+{
+    "nombre": "José González",
+    "correo": "josegonzalez@example.com",
+    "password": "josepass",
+    "direccion": "Calle del Sol 45, Ciudad Luz",
+    "telefono": "3007654321",
+    "rol": "cliente"
+}
+--------------------------------------------
+{
+    "nombre": "María Fernández",
+    "correo": "mariaf@example.com",
+    "password": "mariapassword",
+    "direccion": "Calle Luna 99, Barrio Alto",
+    "telefono": "3006543210",
+    "rol": "cliente"
+}
+---------------------------------
+{
+    "nombre": "Juan Pérez",
+    "correo": "juanperez@example.com",
+    "password": "juansuperpass",
+    "direccion": "Calle 123, Ciudad de la Esperanza",
+    "telefono": "3001234567",
+    "rol": "admin"
+}
+
+
+
+quede en middlewareAutenticacion.js fecha 18/11/24 15:55

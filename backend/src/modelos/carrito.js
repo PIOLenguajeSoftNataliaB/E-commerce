@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const CarritoSchema = new mongoose.Schema({
-    usuario: { type: mongoose.Schema.Types.ObjectId, ref: 'Usuario', required: true },
+    usuario_id: { type: String, required: true },
     productos: [{
         producto: { type: mongoose.Schema.Types.ObjectId, ref: 'Producto', required: true },
         cantidad: { type: Number, required: true }
